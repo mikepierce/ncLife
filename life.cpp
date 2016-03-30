@@ -46,18 +46,7 @@ Life::~Life() {
     delete grid;
 }
 
-// UPDATE THIS ONE!!!
-void Life::print() {
-    move(0,0);
-    for(unsigned i = 0; i < rows; ++i) {
-        for(unsigned j = 0; j < cols; ++j) {
-            addch(grid[i][j]);
-            move(i,j);
-        }
-        move(i,0);
-    }
-    refresh();
-}
+
 
 void Life::update() {
     unsigned sum = 0;

@@ -8,6 +8,8 @@
  *
  */
 
+// STD::VECTOR<bool> IS SMART AND SPACE EFFICIENT AND SHOULD BE USED.
+// http://stackoverflow.com/questions/14433626/variable-size-bitset
 
 
 #include <ncurses.h>
@@ -19,6 +21,8 @@
 int main() {
 //int main(int argc, char** argv) {
 
+    const int a = 34;
+    std::bitset<a> taco;
     initscr();
     clear();
     cbreak();
@@ -31,13 +35,11 @@ int main() {
     getmaxyx(stdscr, rows, cols);
     Life conway(rows, cols);
     conway.flush();
-    //conway.print();
     getchar();
     
     while(true) {
         conway.update();
         conway.flush();
-        // conway.print();
         getchar();
     }
 

@@ -10,6 +10,7 @@
 #define LIFE_HPP
 #include <queue>
 #include <iostream>
+#include <bitset>
 
 
 
@@ -30,16 +31,18 @@ class Life {
         Life();
         Life(unsigned, unsigned);
         ~Life();
-        void print();
         void update();
         void flush();
     private:
         unsigned rows, cols;
         std::queue<action*> actions;
         char** grid;
+        //std::bitset
 };
 
 
 
 #endif
+
+
 
